@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
+// @ts-ignore
 import FluidAnimation from "react-fluid-animation";
 import Image from "next/image";
 import { Jiggle } from "../components/jiggle";
@@ -20,7 +21,7 @@ const data = [
   { value: "Git", count: 30 },
   { value: "NEXTjs", count: 25 },
 ];
-
+// @ts-ignore
 const customRenderer = (tag, size, color) => (
   <span
     key={tag.value}
