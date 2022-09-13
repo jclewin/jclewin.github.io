@@ -5,7 +5,7 @@ import FluidAnimation from "react-fluid-animation";
 import Image from "next/image";
 import { Jiggle } from "../components/jiggle";
 import { TagCloud } from "react-tagcloud";
-import { useEffect, useLayoutEffect, useState } from "react";
+import DyamicTagCloud from "../components/dyamicTagCloud";
 
 const data = [
   { value: "JavaScript", count: 40 },
@@ -21,6 +21,7 @@ const data = [
   { value: "Git", count: 30 },
   { value: "NEXTjs", count: 25 },
 ];
+
 // @ts-ignore
 const customRenderer = (tag, size, color) => (
   <span
@@ -175,6 +176,7 @@ const Home: NextPage = () => {
             <div className={styles.containerSkills}>
               <div className={styles.itemLeft}>
                 <h1 className={styles.skillsText}>
+                  (
                   <TagCloud
                     tags={data}
                     minSize={3}
@@ -182,6 +184,7 @@ const Home: NextPage = () => {
                     renderer={customRenderer}
                     colorOptions={options}
                   />
+                  )
                 </h1>
               </div>
 
